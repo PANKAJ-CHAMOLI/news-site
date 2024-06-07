@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav flex">
+            <div class="logo" onclick="reload()">
+                <h1>NEWS</h1>
+             </div>
+               
+            <div class="nav-link">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                    <li class="hover-link nav-item"id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>     
+                </ul>
+            </div>
+           <div class="search-bar flex">
+                <input id="search-text" class="news-input" type="text" spellcheck="false" placeholder="e.g. sports...">
+                <button class="search-button" id="search-button" >search</button>
+           </div>
+        </div>  
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="card-container">
+   
+        </div> 
+    </main>
+    <template id="template-news-card">
+        <div class="card ">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">this is the title</h3>
+                <h6 id="source">end gadget</h6> 
+                <h6 class="news-source" id="news-date">28/05/2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto optio blanditiis sed ipsum autem voluptatibus reprehenderit obcaecati quaerat exercitationem sint?</p>
+            </div>
+        </div>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
